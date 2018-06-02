@@ -9,6 +9,51 @@
         <link rel="stylesheet" href="fonts/socials/css/fontello.css" type="text/css">
         
         <title>Lorem ipsum</title>
+        
+        <script type="text/javascript">
+            function validate() {
+                var nameField = document.getElementById('nameField');
+                var emailField = document.getElementById('emailField');
+                var messageField = document.getElementById('messageField');
+                
+                var namePattern = /^([A-Z]{1})([a-z]+)\s([A-Z]{1})([a-z]+)$/;
+                var emailPattern = /^([a-z0-9_\.-]+)@([a-z_\.-]+)\.([a-z\.]{2,6})$/;
+                
+                //reset input fields styles:
+                emailField.style="";
+                nameField.style="";
+                
+                if (!emailPattern.test(emailField.value)) {
+                    document.getElementById("errorMessage").innerHTML = "Wrong input!";
+                    emailField.style="border: 1px solid red;";
+                    
+                } else if(!namePattern.test(nameField.value)) {
+                    document.getElementById("errorMessage").innerHTML = "Wrong input!";
+                    nameField.style="border: 1px solid red;";
+                }
+                else {
+                    document.getElementById("errorMessage").innerHTML = "";
+                    window.alert("Message has been sent");
+                    nameField.value = "";
+                    emailField.value = "";
+                    messageField.value = "";
+                }
+            }
+            
+            function enableButton() {
+                var name = document.getElementById('nameField').value;
+                var email = document.getElementById('emailField').value;
+                var message = document.getElementById('messageField').value;
+                
+                if(name.length > 0 && email.length > 0 && message.length > 0) {
+                    document.getElementById('sendButton').disabled  = false;
+                }
+                else{
+                    document.getElementById('sendButton').disabled = true;
+                }
+            }
+        </script>
+        
     </head>
     
     <body>
@@ -32,20 +77,24 @@
                 <form>
                     <p>
                         Name: <br>
-                        <input type ="text" name="name" placeholder="Enter your name">
+                        <input id="nameField" class="contact-form" type ="text" name="name" placeholder="Enter your name"  onkeyup="enableButton();">
                     </p>
                     
                     <p>
                         email: <br>
-                        <input type ="email" name="email" placeholder="Enter your email">
+                        <input id="emailField" class="contact-form" type="email" name="email" placeholder="Enter your email" onkeyup="enableButton();">
                     </p>
                     
                     <p>
                         Message: <br>
-                        <textarea name="message" rows="10" cols="50" placeholder="Write your message..."></textarea>
+                        <textarea id="messageField" class="contact-form" name="message" rows="10" cols="50" placeholder="Write your message..." onkeyup="enableButton();"></textarea>
                     </p>
                     
-                    <p><input type="submit" value="send" disabled></p>
+                    <p>
+                        <input id="sendButton" class="contact-form" type="button" value="send" onclick="validate();" disabled>
+                    </p>
+                        
+                    <div id="errorMessage" style="color: red;"></div>
                 
                 </form>
                    
@@ -53,7 +102,7 @@
             
              <div class="sidebar">
                 <div class="social-container">
-                    <h3>Find me on:</h5>
+                    <h3>Find me on:</h3>
                     <div class="social" id="fb" style="float: left"><a class="icon-facebook" href="http://facebook.com"></a></div> 
                     <div class="social" id="twitter" style="float: left"><a class="icon-twitter" href="http://twitter.com"></a></div>
                     <div class="social" id="gp" style="float: left"><a class="icon-gplus" href="http://plus.google.com"></a></div>
