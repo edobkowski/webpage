@@ -1,0 +1,137 @@
+body {
+    background-image: url("images/light-veneer.png");
+}
+
+.container {
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.header {
+    background-color: white;
+    background-image: url("images/banner-1155437_1920.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 200px;
+    padding: 40px;
+    text-align: center;
+}
+
+.menu {
+    background-color: darkgoldenrod;
+    padding: 0px;
+    text-align: center;
+}
+
+#topbar-menu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    font-size: 28px;
+}
+
+#topbar-menu > li {
+    float: left;
+    width: 150px;
+}
+
+#topbar-menu > li:hover {
+    background-color: #c49c37;
+}
+
+#topbar-menu > li > a {
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    display: inline-block;
+}
+
+#topbar-menu > li:hover > a {
+    color: #966d09;
+}
+
+.content {
+    background-color: white;
+    float: left;
+    margin-right: auto;
+    text-align: justify;
+    width: 63%;
+    min-height: 500px;
+    padding-right: 5%;
+    padding-left: 2%;
+}
+
+.sidebar {
+    background-color: burlywood;
+    float: right;
+    width: 30%;
+    margin-left: auto;
+    margin-right: auto;
+    min-height: 500px;
+    min-width: 50px;
+    text-align: center;
+}
+
+.footer {
+    clear: both;
+    text-align: center;
+    background-color: darkslategrey;
+    color: darkgrey;
+    padding: 5px 0;
+}
+
+.social {
+    width: 50px;
+    height: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 30px;
+    padding-top: 10px;
+}
+
+.social a {
+    color: black;
+    text-decoration: none;
+}
+
+.social-container {
+    margin-top: 50px;
+}
+
+.social:hover a {
+    color: white;
+}
+
+#fb:hover {
+    background-color: darkblue;
+}
+
+#twitter:hover {
+    background-color: deepskyblue;
+}
+
+#yt:hover {
+    background-color: red;
+}
+
+#gp:hover {
+    background-color: crimson;
+}
+
+#github:hover {
+    background-color: black;
+}
+
+#instagram:hover {
+    background-color: palevioletred;
+}
+
+#snapchat:hover {
+    background-color: yellow;
+}
+
+#spotify:hover {
+    background-color: forestgreen;
+}
