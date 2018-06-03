@@ -10,17 +10,11 @@ body {
 
 .header {
     background-color: white;
-    background-image: url("images/banner-1155437_1920.png");
+    background-image: url("images/desk-3139127_1920.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     height: 200px;
     padding: 40px;
-    text-align: center;
-}
-
-.topbar-menu {
-    background-color: darkgoldenrod;
-    padding: 0px;
     text-align: center;
 }
 
@@ -30,6 +24,12 @@ body {
     margin: 0;
     overflow: hidden;
     font-size: 28px;
+}
+
+.topbar-menu {
+    background-color: darkgoldenrod;
+    padding: 0px;
+    text-align: center;
 }
 
 .menu a {
@@ -52,6 +52,29 @@ body {
     color: white;
 }
 
+.sidebar {
+    position: relative;
+    background-color: burlywood;
+    float: left;
+    width: 30%;
+    margin-left: auto;
+    margin-right: auto;
+    min-height: 550px;
+    min-width: 50px;
+    text-align: center;
+}
+
+.content {
+    background-color: white;
+    float: right;
+    margin-right: auto;
+    text-align: justify;
+    width: 63%;
+    min-height: 550px;
+    padding-right: 5%;
+    padding-left: 2%;
+}
+
 .sidebar-menu a {
     color: black;
 }
@@ -70,29 +93,6 @@ body {
 .sidebar-menu li:hover {
     background-color: #e4c69f;
     color: #C7A579;
-}
-
-.content {
-    background-color: white;
-    float: right;
-    margin-right: auto;
-    text-align: justify;
-    width: 63%;
-    min-height: 550px;
-    padding-right: 5%;
-    padding-left: 2%;
-}
-
-.sidebar {
-    position: relative;
-    background-color: burlywood;
-    float: left;
-    width: 30%;
-    margin-left: auto;
-    margin-right: auto;
-    min-height: 550px;
-    min-width: 50px;
-    text-align: center;
 }
 
 .social-container {
