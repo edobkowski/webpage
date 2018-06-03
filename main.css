@@ -18,13 +18,13 @@ body {
     text-align: center;
 }
 
-.menu {
+.topbar-menu {
     background-color: darkgoldenrod;
     padding: 0px;
     text-align: center;
 }
 
-#topbar-menu {
+.menu {
     list-style-type: none;
     padding: 0;
     margin: 0;
@@ -32,46 +32,73 @@ body {
     font-size: 28px;
 }
 
-#topbar-menu > li {
+.menu a {
+    text-decoration: none;
+}
+
+.topbar-menu li {
     float: left;
     width: 150px;
-}
-
-#topbar-menu > li:hover {
-    background-color: #c49c37;
-}
-
-#topbar-menu > li > a {
-    text-decoration: none;
-    color: white;
-    padding: 10px;
     display: inline-block;
+    padding: 10px;
 }
 
-#topbar-menu > li:hover > a {
+.topbar-menu li:hover {
+    background-color: #c49c37;
     color: #966d09;
+}
+
+.topbar-menu a {
+    color: white;
+}
+
+.sidebar-menu a {
+    color: black;
+}
+
+.sidebar-menu li {
+    padding: 10px;
+    border-bottom: 1px solid #C7A579;
+}
+
+.sidebar-menu .menu {
+    width: 100%;
+    position: absolute;
+    top: 0;
+}
+
+.sidebar-menu li:hover {
+    background-color: #e4c69f;
+    color: #C7A579;
 }
 
 .content {
     background-color: white;
-    float: left;
+    float: right;
     margin-right: auto;
     text-align: justify;
     width: 63%;
-    min-height: 500px;
+    min-height: 550px;
     padding-right: 5%;
     padding-left: 2%;
 }
 
 .sidebar {
+    position: relative;
     background-color: burlywood;
-    float: right;
+    float: left;
     width: 30%;
     margin-left: auto;
     margin-right: auto;
-    min-height: 500px;
+    min-height: 550px;
     min-width: 50px;
     text-align: center;
+}
+
+.social-container {
+    position: absolute;
+    bottom: 0;
+    margin-top: 50px;
 }
 
 .footer {
@@ -92,10 +119,6 @@ body {
 .social a {
     color: black;
     text-decoration: none;
-}
-
-.social-container {
-    margin-top: 50px;
 }
 
 .social:hover a {
